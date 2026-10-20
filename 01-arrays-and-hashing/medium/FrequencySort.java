@@ -7,11 +7,11 @@ public class FrequencySort {
 
         //counting and mapping the frequencies of chars
         HashMap <Character, Integer> map = new HashMap<>();
-        for(int i=0; i<s.length; i++)
+        for(int i=0; i<s.length(); i++)
             map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
 
          //building and filling a frequencies array
-        List<Character>[] freqs = new List [s.length+1];
+        List<Character>[] freqs = new List [s.length()+1];
         for (char key : map.keySet()){
             int index = map.get(key);
             if(freqs[index]==null)   freqs[index] = new ArrayList<>();
