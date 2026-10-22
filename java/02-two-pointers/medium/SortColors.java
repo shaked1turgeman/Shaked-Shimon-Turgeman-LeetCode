@@ -4,7 +4,7 @@ public class SortColors {
         int r=0,    w=0,    b=nums.length-1, temp=0;
         while (w <= b){
             if(nums[w]==1)  w++;
-            else if (nums[w]==0){temp=nums[r];   nums[r]=0;  r++;  nums[w]=temp;}
+            else if (nums[w]==0){temp=nums[r];   nums[r]=0;  r++;  nums[w]=temp;    w++;}
             else    {temp=nums[b];   nums[b]=2;  b--;  nums[w]=temp;}
         }
     }
