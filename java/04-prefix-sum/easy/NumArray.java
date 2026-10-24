@@ -1,4 +1,4 @@
-class NumArray {
+public class NumArray {
     private int[] nums, prefixSum;
 
     public NumArray(int[] nums) {
