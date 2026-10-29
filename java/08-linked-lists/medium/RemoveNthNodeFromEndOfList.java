@@ -1,3 +1,7 @@
+package medium;
+
+import common.ListNode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
