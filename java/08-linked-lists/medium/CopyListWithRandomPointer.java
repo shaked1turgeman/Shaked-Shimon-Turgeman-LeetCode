@@ -1,4 +1,7 @@
+package medium;
+
 import common.Node;
+
 /*
 // Definition for a Node.
 class Node {
