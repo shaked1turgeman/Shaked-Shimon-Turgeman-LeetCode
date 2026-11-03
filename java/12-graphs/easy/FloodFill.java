@@ -8,7 +8,7 @@ public class FloodFill {
         return image;
     }
 
-    public void dfs(int[][] image, int sr, int sc, int destC, int prev){
+    private void dfs(int[][] image, int sr, int sc, int destC, int prev){
         if(sr<0 || sr>=image.length || sc<0 || sc>=image[0].length) return;
         else if(image[sr][sc]==prev){
             image[sr][sc]=destC;
