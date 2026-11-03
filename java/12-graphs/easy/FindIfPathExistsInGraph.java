@@ -2,7 +2,7 @@ package easy;
 
 import java.util.*;
 
-// Time = O(V*E)   ,   Space = O(V*E)
+// Time = O(V+E)   ,   Space = O(V+E)
 public class FindIfPathExistsInGraph {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
         List<List<Integer>> graph = new ArrayList<>();
