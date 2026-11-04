@@ -10,3 +10,15 @@ public class SumOfAllSubsetXORTotals {
         return dfs(nums, i + 1, currentXor) + dfs(nums, i + 1, currentXor ^ nums[i]);
     }
 }
+
+
+
+
+// Time = O(n)   ,   Space = O(1)
+public class SumOfAllSubsetXORTotalsWithMathTrick {
+    public int subsetXORSum(int[] nums) {
+        int or = 0;
+        for (int num : nums)    or |= num;
+        return or * (1 << (nums.length - 1));
+    }
+}
