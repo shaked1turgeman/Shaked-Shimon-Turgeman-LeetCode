@@ -1,22 +1,23 @@
+import java.util.*;
+
 public class LongestWordInDictionary {
     public String longestWord(String[] words) {
         TrieNode root = new TrieNode();
-        createTrie(words,root);
-        Arrays.sort(words, (a, b) -> {  if (a.length() != b.length())
-            return Integer.compare(b.length(), a.length());
-            return a.compareTo(b);});
-        
-        for(String word : words){
-            int i=0;
+        createTrie(words, root);
+        String best = "";
+        for (String word : words) {
             TrieNode curr = root;
-            while(i<word.length() && curr.children[word.charAt(i)-'a'].isEndOfWord){
-                if(i==word.length()-1)  return word;
-                curr=curr.children[word.charAt(i)-'a'];
-                i++;
+            boolean valid = true;
+            for (int i = 0; i < word.length(); i++) {
+                curr = curr.children[word.charAt(i) - 'a'];
+                if (!curr.isEndOfWord) {valid = false;  break;}
             }
-            
+            if (valid) {
+                if (word.length()>best.length() || (word.length()==best.length() &&
+                     word.compareTo(best) < 0))  {best = word;}
+            }
         }
-        return "";
+        return best;
     }
 
     public void createTrie(String[] words,TrieNode root) {
