@@ -1,4 +1,4 @@
-public class MyCircularQueue {
+public class DesignCircularQueue {
     private int[] queue;
     private int front, rear, size;
 
