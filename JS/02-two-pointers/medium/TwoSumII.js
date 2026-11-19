@@ -12,4 +12,5 @@ var twoSum = function(numbers, target) {
         else if(sum<target)    left++;
         else    return [left + 1, right + 1];
     }
+    return [];
 };
